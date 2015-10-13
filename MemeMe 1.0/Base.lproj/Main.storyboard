@@ -17,19 +17,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OmI-rD-QZd">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OmI-rD-QZd">
                                 <rect key="frame" x="4" y="64" width="592" height="492"/>
                             </imageView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UeQ-TP-wez">
-                                <rect key="frame" x="4" y="556" width="592" height="44"/>
-                                <items>
-                                    <barButtonItem title="Item" id="ENX-MH-dXK"/>
-                                </items>
-                            </toolbar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7AC-B4-zfv">
                                 <rect key="frame" x="4" y="20" width="592" height="44"/>
                                 <items>
-                                    <barButtonItem title="Item" id="TN0-yT-aVs"/>
+                                    <barButtonItem systemItem="action" id="TN0-yT-aVs"/>
+                                </items>
+                            </toolbar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UeQ-TP-wez">
+                                <rect key="frame" x="4" y="556" width="592" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="camera" id="ENX-MH-dXK"/>
+                                    <barButtonItem width="264" style="plain" systemItem="fixedSpace" id="BkD-4P-AmL"/>
+                                    <barButtonItem title="Album" id="BRf-AT-Llc"/>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -50,7 +52,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="163" y="340"/>
+            <point key="canvasLocation" x="97.5" y="338"/>
         </scene>
     </scenes>
 </document>
