@@ -29,9 +29,17 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UeQ-TP-wez">
                                 <rect key="frame" x="4" y="556" width="592" height="44"/>
                                 <items>
-                                    <barButtonItem systemItem="camera" id="ENX-MH-dXK"/>
-                                    <barButtonItem width="264" style="plain" systemItem="fixedSpace" id="BkD-4P-AmL"/>
-                                    <barButtonItem title="Album" id="BRf-AT-Llc"/>
+                                    <barButtonItem systemItem="camera" id="ENX-MH-dXK">
+                                        <connections>
+                                            <action selector="takePhoto:" destination="BYZ-38-t0r" id="QbE-PE-zVw"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="gmv-hV-zGo"/>
+                                    <barButtonItem title="Album" id="BRf-AT-Llc">
+                                        <connections>
+                                            <action selector="selectPhoto:" destination="BYZ-38-t0r" id="8wt-X3-rWk"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -49,10 +57,13 @@
                             <constraint firstItem="OmI-rD-QZd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="r83-fK-N8N"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="OmI-rD-QZd" id="HOK-Dq-Zno"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="97.5" y="338"/>
+            <point key="canvasLocation" x="241" y="331"/>
         </scene>
     </scenes>
 </document>

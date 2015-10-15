@@ -481,6 +481,7 @@
 				B4B3DF3E1BCBDFF700961338 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B4B3DF3F1BCBDFF700961338 /* Build configuration list for PBXNativeTarget "MemeMe 1.0Tests" */ = {
 			isa = XCConfigurationList;
@@ -489,6 +490,7 @@
 				B4B3DF411BCBDFF700961338 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B4B3DF421BCBDFF700961338 /* Build configuration list for PBXNativeTarget "MemeMe 1.0UITests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +499,7 @@
 				B4B3DF441BCBDFF700961338 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
