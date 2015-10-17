@@ -11,6 +11,20 @@ import UIKit
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var topTextField: UITextField!
+    @IBOutlet weak var bottomTextField: UITextField!
+    
+    
+    let imagePicker = UIImagePickerController()
+//    let textDelegate = textFieldDelegate()
+    
+    let memeTextAttributes = [
+        NSStrokeColorAttributeName: UIColor.blackColor(),
+        NSForegroundColorAttributeName: UIColor.whiteColor(),
+        NSFontAttributeName: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
+        NSStrokeWidthAttributeName: NSNumber (float: -3.0)
+    ]
+    
     
     @IBAction func takePhoto(sender: UIBarButtonItem) {
         if UIImagePickerController.availableCaptureModesForCameraDevice(.Rear) != nil {
@@ -37,12 +51,24 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         presentViewController(imagePicker, animated: true, completion: nil)
     }
     
-    let imagePicker = UIImagePickerController()
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         imagePicker.delegate = self
+//        self.topTextField.delegate = textDelegate
+//        self.bottomTextField.delegate = textDelegate
+        // Top text field attributes
+        self.topTextField.defaultTextAttributes = memeTextAttributes
+        self.topTextField.textAlignment = .Center
+        self.topTextField.borderStyle = UITextBorderStyle.None
+        self.topTextField.backgroundColor = UIColor.clearColor()
+        
+        // Bottom text field attributes
+        self.bottomTextField.defaultTextAttributes = memeTextAttributes
+        self.bottomTextField.textAlignment = .Center
+        self.bottomTextField.borderStyle = UITextBorderStyle.None
+        self.bottomTextField.backgroundColor = UIColor.clearColor()
+        
     }
 
     override func didReceiveMemoryWarning() {
