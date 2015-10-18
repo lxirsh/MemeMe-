@@ -43,12 +43,12 @@
                                 </items>
                             </toolbar>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="TOP" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gs5-4E-aYz">
-                                <rect key="frame" x="20" y="130" width="560" height="30"/>
+                                <rect key="frame" x="20" y="94" width="560" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="BOTTOM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lHP-O9-kaX">
-                                <rect key="frame" x="20" y="460" width="560" height="30"/>
+                                <rect key="frame" x="20" y="496" width="560" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -61,13 +61,13 @@
                             <constraint firstAttribute="trailingMargin" secondItem="UeQ-TP-wez" secondAttribute="trailing" constant="-16" id="GUn-Ho-3is"/>
                             <constraint firstItem="UeQ-TP-wez" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="Ien-f7-Npg"/>
                             <constraint firstItem="lHP-O9-kaX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="UzE-kK-1mF"/>
-                            <constraint firstItem="UeQ-TP-wez" firstAttribute="top" secondItem="lHP-O9-kaX" secondAttribute="bottom" constant="66" id="WaP-QJ-nlC"/>
+                            <constraint firstItem="UeQ-TP-wez" firstAttribute="top" secondItem="lHP-O9-kaX" secondAttribute="bottom" constant="30" id="WaP-QJ-nlC"/>
                             <constraint firstAttribute="trailingMargin" secondItem="OmI-rD-QZd" secondAttribute="trailing" constant="-16" id="WhA-R5-FiN"/>
                             <constraint firstItem="lHP-O9-kaX" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Y5k-Qc-vxm"/>
                             <constraint firstItem="7AC-B4-zfv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="adJ-lr-F4w"/>
                             <constraint firstItem="OmI-rD-QZd" firstAttribute="top" secondItem="7AC-B4-zfv" secondAttribute="bottom" id="goB-Gx-8dM"/>
                             <constraint firstItem="UeQ-TP-wez" firstAttribute="top" secondItem="OmI-rD-QZd" secondAttribute="bottom" id="hoa-ZT-6s3"/>
-                            <constraint firstItem="Gs5-4E-aYz" firstAttribute="top" secondItem="7AC-B4-zfv" secondAttribute="bottom" constant="66" id="kwX-QE-9J7"/>
+                            <constraint firstItem="Gs5-4E-aYz" firstAttribute="top" secondItem="7AC-B4-zfv" secondAttribute="bottom" constant="30" id="kwX-QE-9J7"/>
                             <constraint firstItem="Gs5-4E-aYz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="l4k-pj-cV9"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="UeQ-TP-wez" secondAttribute="bottom" id="lCA-9V-u3o"/>
                             <constraint firstItem="OmI-rD-QZd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="r83-fK-N8N"/>
@@ -81,7 +81,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138" y="338"/>
+            <point key="canvasLocation" x="-407" y="361"/>
         </scene>
     </scenes>
 </document>
