@@ -18,6 +18,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     let imagePicker = UIImagePickerController()
     let textDelegate = textFieldDelegate()
     
+    struct Meme {
+        let topText: String
+        let bottomText: String
+        let image: UIImage
+        let memedImage: UIImage
+    }
+    
     let memeTextAttributes = [
         NSStrokeColorAttributeName: UIColor.blackColor(),
         NSForegroundColorAttributeName: UIColor.whiteColor(),
