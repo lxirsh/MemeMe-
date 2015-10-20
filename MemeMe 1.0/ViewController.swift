@@ -59,10 +59,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     func generateMemedImage() -> UIImage {
+        // TODO: Hide toolbar and navbar
+        
+        // Render view to an image
         UIGraphicsBeginImageContext(self.view.frame.size)
         self.view.drawViewHierarchyInRect(self.view.frame, afterScreenUpdates: true)
         let memedImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
+        
+        // TODO: show toolbar and navbar
+
         
         return memedImage
     }
