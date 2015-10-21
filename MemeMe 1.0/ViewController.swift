@@ -32,6 +32,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         NSStrokeWidthAttributeName: NSNumber (float: -3.0)
     ]
     
+    var savedMemes = [Meme]()
     
     @IBAction func takePhoto(sender: UIBarButtonItem) {
         if UIImagePickerController.availableCaptureModesForCameraDevice(.Rear) != nil {
@@ -60,6 +61,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     func generateMemedImage() -> UIImage {
         // TODO: Hide toolbar and navbar
+        navigationController?.setToolbarHidden(true, animated: true)
         
         // Render view to an image
         UIGraphicsBeginImageContext(self.view.frame.size)
@@ -68,14 +70,21 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         UIGraphicsEndImageContext()
         
         // TODO: show toolbar and navbar
-
+        navigationController?.setToolbarHidden(false, animated: true)
         
         return memedImage
     }
     
-    func save() {
+    func saveMeme() {
         let memedImage = generateMemedImage()
         let meme = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, image: imageView.image!, memedImage: memedImage)
+        savedMemes.append(meme)
+    }
+    
+    @IBAction func shareMeme(sender: AnyObject) {
+        let memedImage = generateMemedImage()
+        let activityVC = UIActivityViewController(activityItems: [memedImage], applicationActivities: nil)
+        self.presentViewController(activityVC, animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
