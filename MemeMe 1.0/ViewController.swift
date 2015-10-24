@@ -61,6 +61,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     func generateMemedImage() -> UIImage {
         // TODO: Hide toolbar and navbar
+        navigationController?.setNavigationBarHidden(true, animated: true)
         navigationController?.setToolbarHidden(true, animated: true)
         
         // Render view to an image
@@ -70,6 +71,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         UIGraphicsEndImageContext()
         
         // TODO: show toolbar and navbar
+        navigationController?.setNavigationBarHidden(false, animated: false)
         navigationController?.setToolbarHidden(false, animated: true)
         
         return memedImage
