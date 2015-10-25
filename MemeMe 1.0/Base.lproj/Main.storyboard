@@ -65,7 +65,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="Va8-H7-Fwe">
-                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="r3W-lr-Utg"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="r3W-lr-Utg">
+                            <connections>
+                                <action selector="shareMeme:" destination="BYZ-38-t0r" id="kX8-x8-cEZ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="bottomTextField" destination="lHP-O9-kaX" id="Rnf-P1-EHg"/>
