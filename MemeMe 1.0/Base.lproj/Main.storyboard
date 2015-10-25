@@ -64,7 +64,9 @@
                             <constraint firstItem="OmI-rD-QZd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="r83-fK-N8N"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="Va8-H7-Fwe"/>
+                    <navigationItem key="navigationItem" title="Title" id="Va8-H7-Fwe">
+                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="r3W-lr-Utg"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="bottomTextField" destination="lHP-O9-kaX" id="Rnf-P1-EHg"/>
                         <outlet property="imageView" destination="OmI-rD-QZd" id="HOK-Dq-Zno"/>
@@ -73,7 +75,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="499" y="352"/>
+            <point key="canvasLocation" x="403" y="352"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Rjy-yp-4j3">
