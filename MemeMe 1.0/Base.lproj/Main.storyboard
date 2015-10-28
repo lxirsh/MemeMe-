@@ -77,6 +77,7 @@
                     <connections>
                         <outlet property="bottomTextField" destination="lHP-O9-kaX" id="Rnf-P1-EHg"/>
                         <outlet property="bottomToolbar" destination="UeQ-TP-wez" id="x2U-5i-4BL"/>
+                        <outlet property="cameraButton" destination="ENX-MH-dXK" id="RRz-sw-ma5"/>
                         <outlet property="imageView" destination="OmI-rD-QZd" id="HOK-Dq-Zno"/>
                         <outlet property="topTextField" destination="Gs5-4E-aYz" id="iB9-dY-Ufy"/>
                     </connections>

@@ -14,6 +14,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var topTextField: UITextField!
     @IBOutlet weak var bottomTextField: UITextField!
     @IBOutlet weak var bottomToolbar: UIToolbar!
+    @IBOutlet weak var cameraButton: UIBarButtonItem!
     
     
     let imagePicker = UIImagePickerController()
@@ -34,6 +35,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     ]
     
     var savedMemes = [Meme]()
+    
+    
     
     @IBAction func takePhoto(sender: UIBarButtonItem) {
         if UIImagePickerController.availableCaptureModesForCameraDevice(.Rear) != nil {
@@ -94,6 +97,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         imagePicker.delegate = self
+        
+        self.cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
+        
         self.topTextField.delegate = textDelegate
         self.bottomTextField.delegate = textDelegate
         // Top text field attributes
