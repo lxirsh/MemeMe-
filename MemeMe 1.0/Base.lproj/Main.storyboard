@@ -22,6 +22,9 @@
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UeQ-TP-wez">
                                 <rect key="frame" x="4" y="556" width="592" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="592" id="l8R-V8-pjY"/>
+                                </constraints>
                                 <items>
                                     <barButtonItem systemItem="camera" id="ENX-MH-dXK">
                                         <connections>
@@ -73,13 +76,14 @@
                     </navigationItem>
                     <connections>
                         <outlet property="bottomTextField" destination="lHP-O9-kaX" id="Rnf-P1-EHg"/>
+                        <outlet property="bottomToolbar" destination="UeQ-TP-wez" id="x2U-5i-4BL"/>
                         <outlet property="imageView" destination="OmI-rD-QZd" id="HOK-Dq-Zno"/>
                         <outlet property="topTextField" destination="Gs5-4E-aYz" id="iB9-dY-Ufy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="403" y="352"/>
+            <point key="canvasLocation" x="353" y="352"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Rjy-yp-4j3">
