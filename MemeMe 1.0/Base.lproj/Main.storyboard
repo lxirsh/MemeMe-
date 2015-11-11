@@ -55,7 +55,7 @@
                             </textField>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="UeQ-TP-wez" secondAttribute="trailing" constant="-16" id="GUn-Ho-3is"/>
                             <constraint firstItem="Gs5-4E-aYz" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="94" id="HOn-w7-jFA"/>

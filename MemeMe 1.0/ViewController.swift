@@ -87,12 +87,20 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         // Do any additional setup after loading the view, typically from a nib.
         imagePicker.delegate = self
         
+        
+        
         // Disable the camera button if camera is not available
         self.cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
         
         self.topTextField.delegate = textDelegate
         self.bottomTextField.delegate = textDelegate
+        
+        // Set attributes for the placehoder text in the two text fields
+        self.topTextField.attributedPlaceholder = NSAttributedString(string: "TOP", attributes: [NSForegroundColorAttributeName: UIColor.whiteColor()])
+        self.bottomTextField.attributedPlaceholder = NSAttributedString(string: "BOTTOM", attributes: [NSForegroundColorAttributeName: UIColor.whiteColor()])
+        
         // Top text field attributes
+        self.topTextField.attributedPlaceholder = NSAttributedString(string: "TOP", attributes: [NSForegroundColorAttributeName: UIColor.whiteColor()])
         self.topTextField.defaultTextAttributes = memeTextAttributes
         self.topTextField.textAlignment = .Center
         self.topTextField.borderStyle = UITextBorderStyle.None
