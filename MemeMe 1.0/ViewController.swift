@@ -39,23 +39,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     
     @IBAction func takePhoto(sender: UIBarButtonItem) {
-        if UIImagePickerController.availableCaptureModesForCameraDevice(.Rear) != nil {
             imagePicker.allowsEditing = false
             imagePicker.sourceType = UIImagePickerControllerSourceType.Camera
             imagePicker.cameraCaptureMode = .Photo
             presentViewController(imagePicker, animated: true, completion: nil)
-        } else {
-            noCamera()
-        }
-        
     }
     
-    func noCamera() {
-        let alertVC = UIAlertController(title: "No Camera", message: "Sorry, there is no camera available on this device", preferredStyle: .Alert)
-        let okAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
-        alertVC.addAction(okAction)
-        presentViewController(alertVC, animated: true, completion: nil)
-    }
     
     @IBAction func selectPhoto(sender: UIBarButtonItem) {
         imagePicker.allowsEditing = false
@@ -98,6 +87,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         // Do any additional setup after loading the view, typically from a nib.
         imagePicker.delegate = self
         
+        // Disable the camera button if camera is not available
         self.cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
         
         self.topTextField.delegate = textDelegate
