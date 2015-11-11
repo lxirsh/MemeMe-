@@ -8,8 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
     
+    // MARK: Properties
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var topTextField: UITextField!
     @IBOutlet weak var bottomTextField: UITextField!
@@ -18,7 +19,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     
     let imagePicker = UIImagePickerController()
-    let textDelegate = textFieldDelegate()
     
     struct Meme {
         let topText: String
@@ -36,7 +36,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     var savedMemes = [Meme]()
     
-    
+    // MARK: Actions
     
     @IBAction func takePhoto(sender: UIBarButtonItem) {
             imagePicker.allowsEditing = false
@@ -87,13 +87,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         // Do any additional setup after loading the view, typically from a nib.
         imagePicker.delegate = self
         
-        
+        topTextField.delegate = self
+        bottomTextField.delegate = self
+
         
         // Disable the camera button if camera is not available
         self.cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
         
-        self.topTextField.delegate = textDelegate
-        self.bottomTextField.delegate = textDelegate
         
         // Set attributes for the placehoder text in the two text fields
         self.topTextField.attributedPlaceholder = NSAttributedString(string: "TOP", attributes: [NSForegroundColorAttributeName: UIColor.whiteColor()])
@@ -160,13 +160,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         return keyboardSize.CGRectValue().height
     }
     
+    // MARK: UITextFieldDelegate
+    
     // Dismiss the keyboard when return key is pressed
-//    func textFieldShouldReturn(textField: UITextField) -> Bool {
-//        textField.resignFirstResponder()
-//        return true
-//    }
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 
-    //MARK: Delegates
+    //MARK: UIImagePickerControllerDelegate
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         if let chosenImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             imageView.contentMode = .ScaleAspectFit

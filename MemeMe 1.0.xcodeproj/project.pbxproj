@@ -14,7 +14,6 @@
 		B4B3DF221BCBDFF600961338 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4B3DF201BCBDFF600961338 /* LaunchScreen.storyboard */; };
 		B4B3DF2D1BCBDFF700961338 /* MemeMe_1_0Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B3DF2C1BCBDFF700961338 /* MemeMe_1_0Tests.swift */; };
 		B4B3DF381BCBDFF700961338 /* MemeMe_1_0UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B3DF371BCBDFF700961338 /* MemeMe_1_0UITests.swift */; };
-		B4F660471BD1287E005820CD /* textFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F660461BD1287E005820CD /* textFieldDelegate.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +47,6 @@
 		B4B3DF331BCBDFF700961338 /* MemeMe 1.0UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MemeMe 1.0UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4B3DF371BCBDFF700961338 /* MemeMe_1_0UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeMe_1_0UITests.swift; sourceTree = "<group>"; };
 		B4B3DF391BCBDFF700961338 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B4F660461BD1287E005820CD /* textFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = textFieldDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +100,6 @@
 				B4B3DF171BCBDFF600961338 /* AppDelegate.swift */,
 				B4B3DF191BCBDFF600961338 /* ViewController.swift */,
 				B4B3DF1B1BCBDFF600961338 /* Main.storyboard */,
-				B4F660461BD1287E005820CD /* textFieldDelegate.swift */,
 				B4B3DF1E1BCBDFF600961338 /* Assets.xcassets */,
 				B4B3DF201BCBDFF600961338 /* LaunchScreen.storyboard */,
 				B4B3DF231BCBDFF600961338 /* Info.plist */,
@@ -259,7 +256,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4B3DF1A1BCBDFF600961338 /* ViewController.swift in Sources */,
-				B4F660471BD1287E005820CD /* textFieldDelegate.swift in Sources */,
 				B4B3DF181BCBDFF600961338 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
