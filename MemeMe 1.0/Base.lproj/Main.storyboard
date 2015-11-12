@@ -25,7 +25,7 @@
                                 <rect key="frame" x="4" y="556" width="592" height="44"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="592" id="l8R-V8-pjY"/>
+                                    <constraint firstAttribute="width" priority="250" constant="592" id="l8R-V8-pjY"/>
                                 </constraints>
                                 <items>
                                     <barButtonItem systemItem="camera" id="ENX-MH-dXK">
