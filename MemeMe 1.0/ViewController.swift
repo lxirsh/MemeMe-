@@ -46,25 +46,25 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         
         // Disable the camera button if camera is not available
-        self.cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
+        cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
         
         
         // Set attributes for the placehoder text in the two text fields
-        self.topTextField.attributedPlaceholder = NSAttributedString(string: "TOP", attributes: [NSForegroundColorAttributeName: UIColor.whiteColor()])
-        self.bottomTextField.attributedPlaceholder = NSAttributedString(string: "BOTTOM", attributes: [NSForegroundColorAttributeName: UIColor.whiteColor()])
+        topTextField.attributedPlaceholder = NSAttributedString(string: "TOP", attributes: [NSForegroundColorAttributeName: UIColor.whiteColor()])
+        bottomTextField.attributedPlaceholder = NSAttributedString(string: "BOTTOM", attributes: [NSForegroundColorAttributeName: UIColor.whiteColor()])
         
         // Top text field attributes
-        self.topTextField.attributedPlaceholder = NSAttributedString(string: "TOP", attributes: [NSForegroundColorAttributeName: UIColor.whiteColor()])
-        self.topTextField.defaultTextAttributes = memeTextAttributes
-        self.topTextField.textAlignment = .Center
-        self.topTextField.borderStyle = UITextBorderStyle.None
-        self.topTextField.backgroundColor = UIColor.clearColor()
+        topTextField.attributedPlaceholder = NSAttributedString(string: "TOP", attributes: [NSForegroundColorAttributeName: UIColor.whiteColor()])
+        topTextField.defaultTextAttributes = memeTextAttributes
+        topTextField.textAlignment = .Center
+        topTextField.borderStyle = UITextBorderStyle.None
+        topTextField.backgroundColor = UIColor.clearColor()
         
         // Bottom text field attributes
-        self.bottomTextField.defaultTextAttributes = memeTextAttributes
-        self.bottomTextField.textAlignment = .Center
-        self.bottomTextField.borderStyle = UITextBorderStyle.None
-        self.bottomTextField.backgroundColor = UIColor.clearColor()
+        bottomTextField.defaultTextAttributes = memeTextAttributes
+        bottomTextField.textAlignment = .Center
+        bottomTextField.borderStyle = UITextBorderStyle.None
+        bottomTextField.backgroundColor = UIColor.clearColor()
         
     }
     
@@ -75,12 +75,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        self.subscribeToKeyboardNotification()
+        subscribeToKeyboardNotification()
     }
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
-        self.unsubscribeFromKeyboardNotifications()
+        unsubscribeFromKeyboardNotifications()
     }
     
     // MARK: Actions
@@ -102,7 +102,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBAction func shareMeme(sender: AnyObject) {
         let memedImage = generateMemedImage()
         let activityVC = UIActivityViewController(activityItems: [memedImage], applicationActivities: nil)
-        self.presentViewController(activityVC, animated: true, completion: nil)
+        presentViewController(activityVC, animated: true, completion: nil)
     }
     
     // MARK: Methods
@@ -110,17 +110,17 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func generateMemedImage() -> UIImage {
         // Hide toolbar and navbar
         navigationController?.setNavigationBarHidden(true, animated: true)
-        self.bottomToolbar.hidden = true
+        bottomToolbar.hidden = true
         
         // Render view to an image
         UIGraphicsBeginImageContext(self.view.frame.size)
-        self.view.drawViewHierarchyInRect(self.view.frame, afterScreenUpdates: true)
+        view.drawViewHierarchyInRect(self.view.frame, afterScreenUpdates: true)
         let memedImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
         // Show toolbar and navbar
         navigationController?.setNavigationBarHidden(false, animated: false)
-        self.bottomToolbar.hidden = false
+        bottomToolbar.hidden = false
         
         return memedImage
     }
@@ -134,14 +134,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     // Shift the view up when keyboardWillShow notification is received
     func keyboardWillShow(notification: NSNotification) {
         if bottomTextField.isFirstResponder() {
-            self.view.frame.origin.y -= getKeyboardHeight(notification)
+            view.frame.origin.y -= getKeyboardHeight(notification)
         }
     }
     
     // Shift the keyboard back down
     func keyboardWillHide(notification: NSNotification) {
         if bottomTextField.isFirstResponder() {
-            self.view.frame.origin.y += getKeyboardHeight(notification)
+            view.frame.origin.y += getKeyboardHeight(notification)
         }
     }
     
