@@ -46,17 +46,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         topTextField.attributedPlaceholder = NSAttributedString(string: "TOP", attributes: [NSForegroundColorAttributeName: UIColor.whiteColor()])
         bottomTextField.attributedPlaceholder = NSAttributedString(string: "BOTTOM", attributes: [NSForegroundColorAttributeName: UIColor.whiteColor()])
         
-        // Top text field attributes
-        topTextField.defaultTextAttributes = memeTextAttributes
-        topTextField.textAlignment = .Center
-        topTextField.borderStyle = UITextBorderStyle.None
-        topTextField.backgroundColor = UIColor.clearColor()
-        
-        // Bottom text field attributes
-        bottomTextField.defaultTextAttributes = memeTextAttributes
-        bottomTextField.textAlignment = .Center
-        bottomTextField.borderStyle = UITextBorderStyle.None
-        bottomTextField.backgroundColor = UIColor.clearColor()
+        // Text field attributes
+        stylizeTextFields(topTextField)
+        stylizeTextFields(bottomTextField)
         
     }
     
@@ -109,6 +101,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     // MARK: Methods
+    
+    // Set attributes for the text fields
+    func stylizeTextFields(textField: UITextField) {
+        
+        textField.defaultTextAttributes = memeTextAttributes
+        textField.textAlignment = .Center
+        textField.borderStyle = UITextBorderStyle.None
+        textField.backgroundColor = UIColor.clearColor()
+
+    }
     
     func generateMemedImage() -> UIImage {
         // Hide toolbar and navbar
