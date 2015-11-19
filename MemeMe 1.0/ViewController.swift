@@ -19,7 +19,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     
     let imagePicker = UIImagePickerController()
-        
+    
     let memeTextAttributes = [
         NSStrokeColorAttributeName: UIColor.blackColor(),
         NSForegroundColorAttributeName: UIColor.whiteColor(),
@@ -47,7 +47,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         bottomTextField.attributedPlaceholder = NSAttributedString(string: "BOTTOM", attributes: [NSForegroundColorAttributeName: UIColor.whiteColor()])
         
         // Top text field attributes
-        topTextField.attributedPlaceholder = NSAttributedString(string: "TOP", attributes: [NSForegroundColorAttributeName: UIColor.whiteColor()])
         topTextField.defaultTextAttributes = memeTextAttributes
         topTextField.textAlignment = .Center
         topTextField.borderStyle = UITextBorderStyle.None
