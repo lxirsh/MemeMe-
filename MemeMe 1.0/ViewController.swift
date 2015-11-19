@@ -92,8 +92,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             if completed {
                 self.saveMeme()
                 self.dismissViewControllerAnimated(true, completion: nil)
-                print("Saved")
-                print(self.savedMemes)
             }
         }
         
