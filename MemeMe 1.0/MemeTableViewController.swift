@@ -28,6 +28,12 @@ class MemeTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        tableView.reloadData()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -46,15 +52,18 @@ class MemeTableViewController: UITableViewController {
         return savedMemes.count
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("deatailView", forIndexPath: indexPath)
 
         // Configure the cell...
+        let meme = savedMemes[indexPath.row] as Meme
+        cell.imageView?.image = meme.image
+        cell.textLabel?.text = meme.topText + "..." + meme.bottomText
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
