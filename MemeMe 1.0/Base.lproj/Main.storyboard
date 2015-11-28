@@ -25,13 +25,13 @@
                                 <rect key="frame" x="20" y="470" width="560" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" borderStyle="roundedRect" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ren-sr-sXT">
                                 <rect key="frame" x="20" y="120" width="560" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                         </subviews>
                         <animations/>
@@ -123,10 +123,10 @@
             </objects>
             <point key="canvasLocation" x="-1096" y="286"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Meme Table View Controller-->
         <scene sceneID="hH7-hX-bPM">
             <objects>
-                <tableViewController id="Pa1-ie-A2L" sceneMemberID="viewController">
+                <tableViewController id="Pa1-ie-A2L" customClass="MemeTableViewController" customModule="MemeMe_1_0" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="hYH-Lh-bbE">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -149,7 +149,13 @@
                             <outlet property="delegate" destination="Pa1-ie-A2L" id="gD9-Rb-4Vq"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="le5-bm-32l"/>
+                    <navigationItem key="navigationItem" id="le5-bm-32l">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="4yl-IS-1i2">
+                            <connections>
+                                <segue destination="OgW-MO-x0I" kind="show" identifier="MemeVC" id="hr4-go-r1h"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VCC-lK-jBd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -177,7 +183,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NGt-nA-T0G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1106" y="382"/>
+            <point key="canvasLocation" x="1340" y="-96"/>
         </scene>
         <!--Item-->
         <scene sceneID="WLW-0I-r7y">

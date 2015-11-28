@@ -134,6 +134,7 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         let memedImage = generateMemedImage()
         let meme = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, image: imageView.image!, memedImage: memedImage)
         (UIApplication.sharedApplication().delegate as! AppDelegate).savedMemes.append(meme)
+        print("Memes:  \((UIApplication.sharedApplication().delegate as! AppDelegate).savedMemes)")
     }
 
     // Shift the view up when keyboardWillShow notification is received

@@ -8,10 +8,19 @@
 
 import UIKit
 
-class MemeTableViewController: UITableViewController {
 
+class MemeTableViewController: UITableViewController {
+    
+    var savedMemes: [Meme] {
+        return (UIApplication.sharedApplication().delegate as! AppDelegate).savedMemes
+    }
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        let applicationDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
+//        var savedMemes = applicationDelegate.savedMemes
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -34,7 +43,7 @@ class MemeTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return savedMemes.count
     }
 
     /*
