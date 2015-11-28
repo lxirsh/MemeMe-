@@ -21,13 +21,13 @@
                                 <rect key="frame" x="0.0" y="64" width="600" height="492"/>
                                 <animations/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pTk-z6-YQP">
-                                <rect key="frame" x="20" y="478" width="560" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" borderStyle="roundedRect" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pTk-z6-YQP">
+                                <rect key="frame" x="20" y="470" width="560" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ren-sr-sXT">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" borderStyle="roundedRect" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ren-sr-sXT">
                                 <rect key="frame" x="20" y="120" width="560" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -35,10 +35,10 @@
                             </textField>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="pTk-z6-YQP" firstAttribute="leading" secondItem="IgH-Ka-70B" secondAttribute="leadingMargin" id="31E-NW-40o"/>
-                            <constraint firstItem="H83-Ao-p8y" firstAttribute="top" secondItem="pTk-z6-YQP" secondAttribute="bottom" constant="48" id="D9l-eH-qNx"/>
+                            <constraint firstItem="H83-Ao-p8y" firstAttribute="top" secondItem="pTk-z6-YQP" secondAttribute="bottom" constant="56" id="D9l-eH-qNx"/>
                             <constraint firstItem="vO0-lC-XnJ" firstAttribute="leading" secondItem="IgH-Ka-70B" secondAttribute="leadingMargin" constant="-20" id="DGZ-xv-wuk"/>
                             <constraint firstItem="vO0-lC-XnJ" firstAttribute="top" secondItem="sFj-24-YZ1" secondAttribute="bottom" id="Hq6-8H-I3r"/>
                             <constraint firstItem="pTk-z6-YQP" firstAttribute="trailing" secondItem="IgH-Ka-70B" secondAttribute="trailingMargin" id="OmQ-2H-uYT"/>
