@@ -27,7 +27,7 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         NSStrokeWidthAttributeName: NSNumber (float: -3.0)
     ]
     
-    var savedMemes = [Meme]()
+//    var savedMemes = [Meme]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -133,7 +133,7 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     func saveMeme() {
         let memedImage = generateMemedImage()
         let meme = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, image: imageView.image!, memedImage: memedImage)
-        savedMemes.append(meme)
+        (UIApplication.sharedApplication().delegate as! AppDelegate).savedMemes.append(meme)
     }
 
     // Shift the view up when keyboardWillShow notification is received
