@@ -14,7 +14,7 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var topTextField: UITextField!
     @IBOutlet weak var bottomTextField: UITextField!
-    @IBOutlet weak var bottomToolbar: UIToolbar!
+    //@IBOutlet weak var bottomToolbar: UIToolbar!
     @IBOutlet weak var cameraButton: UIBarButtonItem!
     
     
@@ -113,7 +113,8 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     func generateMemedImage() -> UIImage {
         // Hide toolbar and navbar
         navigationController?.setNavigationBarHidden(true, animated: true)
-        bottomToolbar.hidden = true
+        navigationController?.setToolbarHidden(true, animated: true)
+//        bottomToolbar.hidden = true
         
         // Render view to an image
         UIGraphicsBeginImageContext(self.view.frame.size)
@@ -122,8 +123,9 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         UIGraphicsEndImageContext()
         
         // Show toolbar and navbar
-        navigationController?.setNavigationBarHidden(false, animated: false)
-        bottomToolbar.hidden = false
+        navigationController?.setNavigationBarHidden(false, animated: true)
+        navigationController?.setToolbarHidden(false, animated: true)
+//        bottomToolbar.hidden = false
         
         return memedImage
     }
