@@ -16,6 +16,7 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     @IBOutlet weak var bottomTextField: UITextField!
     //@IBOutlet weak var bottomToolbar: UIToolbar!
     @IBOutlet weak var cameraButton: UIBarButtonItem!
+    @IBOutlet weak var actionButton: UIBarButtonItem!
     
     
     let imagePicker = UIImagePickerController()
@@ -59,6 +60,10 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        
+        // Disable the action button if a photo has not been chosen
+        actionButton.enabled = self.imageView.image != nil
+
         subscribeToKeyboardNotification()
     }
     

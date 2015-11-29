@@ -16,6 +16,7 @@
 		B4B3DF2D1BCBDFF700961338 /* MemeMe_1_0Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B3DF2C1BCBDFF700961338 /* MemeMe_1_0Tests.swift */; };
 		B4B3DF381BCBDFF700961338 /* MemeMe_1_0UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B3DF371BCBDFF700961338 /* MemeMe_1_0UITests.swift */; };
 		B4B8A92F1C09E7E0001FDF88 /* MemeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B8A92E1C09E7E0001FDF88 /* MemeTableViewController.swift */; };
+		B4FCCD0C1C0AD49300A61851 /* MemeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FCCD0B1C0AD49300A61851 /* MemeTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		B4B3DF371BCBDFF700961338 /* MemeMe_1_0UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeMe_1_0UITests.swift; sourceTree = "<group>"; };
 		B4B3DF391BCBDFF700961338 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4B8A92E1C09E7E0001FDF88 /* MemeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeTableViewController.swift; sourceTree = "<group>"; };
+		B4FCCD0B1C0AD49300A61851 /* MemeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MemeTableViewCell.swift; path = ../MemeTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				B4777FF91BFD8C0700797AC9 /* Meme.swift */,
 				B4B3DF1B1BCBDFF600961338 /* Main.storyboard */,
 				B4B8A92E1C09E7E0001FDF88 /* MemeTableViewController.swift */,
+				B4FCCD0B1C0AD49300A61851 /* MemeTableViewCell.swift */,
 				B4B3DF1E1BCBDFF600961338 /* Assets.xcassets */,
 				B4B3DF201BCBDFF600961338 /* LaunchScreen.storyboard */,
 				B4B3DF231BCBDFF600961338 /* Info.plist */,
@@ -263,6 +266,7 @@
 			files = (
 				B4777FFA1BFD8C0700797AC9 /* Meme.swift in Sources */,
 				B4B3DF1A1BCBDFF600961338 /* MemeViewController.swift in Sources */,
+				B4FCCD0C1C0AD49300A61851 /* MemeTableViewCell.swift in Sources */,
 				B4B3DF181BCBDFF600961338 /* AppDelegate.swift in Sources */,
 				B4B8A92F1C09E7E0001FDF88 /* MemeTableViewController.swift in Sources */,
 			);
