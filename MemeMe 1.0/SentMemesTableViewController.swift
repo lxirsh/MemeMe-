@@ -19,6 +19,8 @@ class SentMemesTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        loadSampleMemes()
+        
 //        let applicationDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
 //        var savedMemes = applicationDelegate.savedMemes
 
@@ -28,6 +30,32 @@ class SentMemesTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
+    
+    func loadSampleMemes() {
+        let photo1 = UIImage(named: "meal1")!
+        let topText = "TOP"
+        let bottomText = "BOTTOM"
+        let image = photo1
+        let memedImage = photo1
+        let meme1 = Meme(topText: topText, bottomText: bottomText, image: image, memedImage: memedImage)
+        
+        let photo2 = UIImage(named: "meal2")!
+        let image2 = photo2
+        let memedImage2 = photo2
+        let meme2 = Meme(topText: topText, bottomText: bottomText, image: image2, memedImage: memedImage2)
+        
+        let photo3 = UIImage(named: "meal3")!
+        let image3 = photo3
+        let memedImage3 = photo3
+        let meme3 = Meme(topText: topText, bottomText: bottomText, image: image3, memedImage: memedImage3)
+        
+        (UIApplication.sharedApplication().delegate as! AppDelegate).savedMemes.append(meme1)
+        (UIApplication.sharedApplication().delegate as! AppDelegate).savedMemes.append(meme2)
+        (UIApplication.sharedApplication().delegate as! AppDelegate).savedMemes.append(meme3)
+
+
+    }
+
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
