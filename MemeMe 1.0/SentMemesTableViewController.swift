@@ -49,10 +49,21 @@ class SentMemesTableViewController: UITableViewController {
         let memedImage3 = photo3
         let meme3 = Meme(topText: topText, bottomText: bottomText, image: image3, memedImage: memedImage3)
         
+        let photo4 = UIImage(named: "meal1")!
+        let image4 = photo4
+        let memedImage4 = photo4
+        let meme4 = Meme(topText: "TOP", bottomText: "BOTTOM", image: image4, memedImage: memedImage4)
+        
+        let photo5 = UIImage(named: "meal2")!
+        let meme5 = Meme(topText: "TOP", bottomText: "BOTTOM", image: photo5, memedImage: photo5)
+        
+        
+        
         (UIApplication.sharedApplication().delegate as! AppDelegate).savedMemes.append(meme1)
         (UIApplication.sharedApplication().delegate as! AppDelegate).savedMemes.append(meme2)
         (UIApplication.sharedApplication().delegate as! AppDelegate).savedMemes.append(meme3)
-
+        (UIApplication.sharedApplication().delegate as! AppDelegate).savedMemes.append(meme4)
+        (UIApplication.sharedApplication().delegate as! AppDelegate).savedMemes.append(meme5)
 
     }
 

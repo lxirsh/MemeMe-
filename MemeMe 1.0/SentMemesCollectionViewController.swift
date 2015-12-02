@@ -32,6 +32,7 @@ class SentMemesCollectionViewController: UICollectionViewController {
         let space: CGFloat = 3.0
         let dimension = (self.view.frame.width - (2 * space)) / 3.0
         
+//        flowLayout.sectionInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
         flowLayout.minimumInteritemSpacing = space
         flowLayout.minimumLineSpacing = space
         flowLayout.itemSize = CGSizeMake(dimension, dimension)
@@ -40,7 +41,7 @@ class SentMemesCollectionViewController: UICollectionViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        collectionView?.reloadData()
+        collectionView!.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
