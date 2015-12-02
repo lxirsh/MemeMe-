@@ -29,7 +29,7 @@ class SentMemesCollectionViewController: UICollectionViewController {
         self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         // Do any additional setup after loading the view.
-        let space: CGFloat = 3.0
+        let space: CGFloat = 1.5
         let dimension = (self.view.frame.width - (2 * space)) / 3.0
         
 //        flowLayout.sectionInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)

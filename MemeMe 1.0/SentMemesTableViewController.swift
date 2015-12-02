@@ -32,39 +32,17 @@ class SentMemesTableViewController: UITableViewController {
     }
     
     func loadSampleMemes() {
-        let photo1 = UIImage(named: "meal1")!
-        let topText = "TOP"
-        let bottomText = "BOTTOM"
-        let image = photo1
-        let memedImage = photo1
-        let meme1 = Meme(topText: topText, bottomText: bottomText, image: image, memedImage: memedImage)
-        
-        let photo2 = UIImage(named: "meal2")!
-        let image2 = photo2
-        let memedImage2 = photo2
-        let meme2 = Meme(topText: topText, bottomText: bottomText, image: image2, memedImage: memedImage2)
-        
-        let photo3 = UIImage(named: "meal3")!
-        let image3 = photo3
-        let memedImage3 = photo3
-        let meme3 = Meme(topText: topText, bottomText: bottomText, image: image3, memedImage: memedImage3)
-        
-        let photo4 = UIImage(named: "meal1")!
-        let image4 = photo4
-        let memedImage4 = photo4
-        let meme4 = Meme(topText: "TOP", bottomText: "BOTTOM", image: image4, memedImage: memedImage4)
-        
-        let photo5 = UIImage(named: "meal2")!
-        let meme5 = Meme(topText: "TOP", bottomText: "BOTTOM", image: photo5, memedImage: photo5)
-        
-        
-        
-        (UIApplication.sharedApplication().delegate as! AppDelegate).savedMemes.append(meme1)
-        (UIApplication.sharedApplication().delegate as! AppDelegate).savedMemes.append(meme2)
-        (UIApplication.sharedApplication().delegate as! AppDelegate).savedMemes.append(meme3)
-        (UIApplication.sharedApplication().delegate as! AppDelegate).savedMemes.append(meme4)
-        (UIApplication.sharedApplication().delegate as! AppDelegate).savedMemes.append(meme5)
 
+        let numberOfSampleMemes = 10
+        
+        for index in 0...numberOfSampleMemes {
+            let newIndex = (index % 3) + 1
+            let imageName = "meal\(newIndex)"
+            let image = UIImage(named: imageName)!
+            let meme = Meme(topText: "TOP", bottomText: "BOTTOM", image: image, memedImage: image)
+            (UIApplication.sharedApplication().delegate as! AppDelegate).savedMemes.append(meme)
+            
+        }
     }
 
     
