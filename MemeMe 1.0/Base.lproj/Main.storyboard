@@ -226,7 +226,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VOW-G8-3a0">
-                                            <rect key="frame" x="0.0" y="0.0" width="132" height="126"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="132" height="118"/>
                                             <animations/>
                                         </imageView>
                                     </subviews>
@@ -236,7 +236,7 @@
                                 <animations/>
                                 <constraints>
                                     <constraint firstItem="VOW-G8-3a0" firstAttribute="trailing" secondItem="Uih-W7-258" secondAttribute="trailingMargin" constant="8" id="6LM-Ge-3RB"/>
-                                    <constraint firstItem="VOW-G8-3a0" firstAttribute="bottom" secondItem="Uih-W7-258" secondAttribute="bottomMargin" constant="8" id="Rvc-yR-eM6"/>
+                                    <constraint firstItem="VOW-G8-3a0" firstAttribute="bottom" secondItem="Uih-W7-258" secondAttribute="bottomMargin" id="Rvc-yR-eM6"/>
                                     <constraint firstItem="VOW-G8-3a0" firstAttribute="top" secondItem="Uih-W7-258" secondAttribute="topMargin" constant="-8" id="YL3-VN-InH"/>
                                     <constraint firstItem="VOW-G8-3a0" firstAttribute="leading" secondItem="Uih-W7-258" secondAttribute="leadingMargin" constant="-8" id="oR2-Pp-sKn"/>
                                 </constraints>
