@@ -85,6 +85,40 @@
             </objects>
             <point key="canvasLocation" x="2874" y="345"/>
         </scene>
+        <!--Sent Memes Detail View Controller-->
+        <scene sceneID="4CR-CZ-ngI">
+            <objects>
+                <viewController storyboardIdentifier="SentMemesDetailViewController" id="pwu-vK-1oE" customClass="SentMemesDetailViewController" customModule="MemeMe_1_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MNX-P3-Nqc"/>
+                        <viewControllerLayoutGuide type="bottom" id="TIr-Jh-Grq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qni-gv-HUn">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8Z0-Jj-lcf">
+                                <rect key="frame" x="4" y="20" width="592" height="580"/>
+                                <animations/>
+                            </imageView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8Z0-Jj-lcf" firstAttribute="top" secondItem="MNX-P3-Nqc" secondAttribute="bottom" id="9mt-Am-M4g"/>
+                            <constraint firstItem="TIr-Jh-Grq" firstAttribute="top" secondItem="8Z0-Jj-lcf" secondAttribute="bottom" id="fPG-vD-tv6"/>
+                            <constraint firstItem="8Z0-Jj-lcf" firstAttribute="leading" secondItem="Qni-gv-HUn" secondAttribute="leadingMargin" constant="-16" id="pgo-lh-9jr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8Z0-Jj-lcf" secondAttribute="trailing" constant="-16" id="y6x-L5-ta1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="8Z0-Jj-lcf" id="fB2-Aj-xVv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yPo-iZ-g67" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1895" y="806"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="zwK-LR-zir">
             <objects>
@@ -281,6 +315,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="table" width="30" height="30"/>
+        <image name="table" width="37" height="32"/>
     </resources>
 </document>
