@@ -83,6 +83,25 @@ class SentMemesTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.Delete {
+//            savedMemes.removeAtIndex(indexPath.row)
+//            appDelegate.memes.removeAtIndex(indexPath.row)
+            let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+//            let index = indexPath.row
+            appDelegate.savedMemes.removeAtIndex(indexPath.row)
+            
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+        }
+    }
+    
+    // MARK: - Navigation
+
+    
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let detailController = self.storyboard!.instantiateViewControllerWithIdentifier("SentMemesDetailViewController") as! SentMemesDetailViewController
         detailController.meme = self.savedMemes[indexPath.row]
