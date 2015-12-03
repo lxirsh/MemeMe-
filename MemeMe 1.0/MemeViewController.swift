@@ -103,6 +103,11 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         presentViewController(activityVC, animated: true, completion: nil)
     }
     
+    @IBAction func cancel(sender: UIBarButtonItem) {
+            self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    
     // MARK: Methods
     
     // Set attributes for the text fields

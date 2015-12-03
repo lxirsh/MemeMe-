@@ -70,6 +70,11 @@
                                 <action selector="shareMeme:" destination="cIk-lp-Brj" id="Wqz-fB-9gF"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="6qe-3W-BSL">
+                            <connections>
+                                <action selector="cancel:" destination="cIk-lp-Brj" id="IcM-A9-eTx"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
