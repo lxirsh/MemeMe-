@@ -86,6 +86,7 @@ class SentMemesTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let detailController = self.storyboard!.instantiateViewControllerWithIdentifier("SentMemesDetailViewController") as! SentMemesDetailViewController
         detailController.meme = self.savedMemes[indexPath.row]
+        detailController.hidesBottomBarWhenPushed = true
         self.navigationController!.pushViewController(detailController, animated: true)
         
     }
