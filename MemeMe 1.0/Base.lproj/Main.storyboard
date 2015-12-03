@@ -284,7 +284,13 @@
                             <outlet property="delegate" destination="FWG-bX-OwF" id="nad-1b-HQx"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="YHe-e0-Wmi"/>
+                    <navigationItem key="navigationItem" id="YHe-e0-Wmi">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ZvF-CC-3FJ">
+                            <connections>
+                                <segue destination="OgW-MO-x0I" kind="show" id="f0u-dY-dai"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="flowLayout" destination="c9O-SD-dQc" id="4bl-P3-Hmc"/>
                     </connections>
@@ -317,4 +323,7 @@
     <resources>
         <image name="table" width="37" height="32"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="hr4-go-r1h"/>
+    </inferredMetricsTieBreakers>
 </document>
