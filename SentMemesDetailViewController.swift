@@ -16,8 +16,37 @@ class SentMemesDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem (
+            title: "Edit",
+            style: UIBarButtonItemStyle.Plain,
+            target: self,
+            action: "edit")
 
         // Do any additional setup after loading the view.
+    }
+    
+    func edit() {
+        let rootViewController = self.storyboard!.instantiateViewControllerWithIdentifier("MemeNavigationController") as! UINavigationController
+////        let topViewController = rootViewController.topViewController as! MemeViewController
+////        topViewController.imageView.image = meme.image
+        self.navigationController!.presentViewController(rootViewController, animated: true, completion: nil)
+
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        print("prepareForSegue function called")
+        if segue.identifier == "MemeNavigationController" {
+            print("identifier: MemeNavigationController")
+            if let destinationViewController = segue.destinationViewController as? UINavigationController {
+                print("segue: destinationViewController")
+                if let editViewController = destinationViewController.topViewController as? MemeViewController {
+                    print("segue: topViewController")
+                    editViewController.imageView.image = meme.image
+                    editViewController.topTextField.text = "test"
+                }
+            }
+        }
     }
     
     override func viewWillAppear(animated: Bool) {

@@ -8,7 +8,7 @@
         <!--Meme View Controller-->
         <scene sceneID="Moi-hV-9xX">
             <objects>
-                <viewController id="cIk-lp-Brj" customClass="MemeViewController" customModule="MemeMe_1_0" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MemeViewController" id="cIk-lp-Brj" customClass="MemeViewController" customModule="MemeMe_1_0" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sFj-24-YZ1"/>
                         <viewControllerLayoutGuide type="bottom" id="H83-Ao-p8y"/>
@@ -88,7 +88,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cWi-tS-8s4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2874" y="345"/>
+            <point key="canvasLocation" x="2534" y="266"/>
         </scene>
         <!--Sent Memes Detail View Controller-->
         <scene sceneID="4CR-CZ-ngI">
@@ -122,7 +122,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yPo-iZ-g67" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1895" y="806"/>
+            <point key="canvasLocation" x="1432" y="954"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="zwK-LR-zir">
@@ -201,7 +201,8 @@
         <!--Navigation Controller-->
         <scene sceneID="Z3h-ve-t9a">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="OgW-MO-x0I" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NGt-nA-T0G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController storyboardIdentifier="MemeNavigationController" automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="OgW-MO-x0I" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" opaque="NO" contentMode="scaleToFill" id="Xmd-Pj-Tmn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -215,12 +216,11 @@
                         <animations/>
                     </toolbar>
                     <connections>
-                        <segue destination="cIk-lp-Brj" kind="relationship" relationship="rootViewController" id="Hq9-k5-5zL"/>
+                        <segue destination="cIk-lp-Brj" kind="relationship" relationship="rootViewController" id="wDv-xq-foa"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NGt-nA-T0G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1340" y="-96"/>
+            <point key="canvasLocation" x="2068" y="226"/>
         </scene>
         <!--table-->
         <scene sceneID="WLW-0I-r7y">
@@ -302,7 +302,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BIe-Uc-rIj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="718" y="690"/>
+            <point key="canvasLocation" x="528" y="644"/>
         </scene>
         <!--collection-->
         <scene sceneID="Qwt-qb-SEA">
@@ -322,7 +322,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WSd-fu-zsi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-94" y="690"/>
+            <point key="canvasLocation" x="-284" y="650"/>
         </scene>
     </scenes>
     <resources>

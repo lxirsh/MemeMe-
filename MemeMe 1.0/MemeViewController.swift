@@ -51,6 +51,7 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         stylizeTextFields(topTextField)
         stylizeTextFields(bottomTextField)
         
+        
     }
     
 //    override func didReceiveMemoryWarning() {
@@ -61,10 +62,15 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
+        
         // Disable the action button if a photo has not been chosen
         actionButton.enabled = self.imageView.image != nil
 
         subscribeToKeyboardNotification()
+        
+        navigationController?.setNavigationBarHidden(false, animated: true)
+        navigationController?.setToolbarHidden(false, animated: true)
+
     }
     
     override func viewWillDisappear(animated: Bool) {
