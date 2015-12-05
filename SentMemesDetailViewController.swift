@@ -34,21 +34,6 @@ class SentMemesDetailViewController: UIViewController {
 
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        print("prepareForSegue function called")
-        if segue.identifier == "MemeNavigationController" {
-            print("identifier: MemeNavigationController")
-            if let destinationViewController = segue.destinationViewController as? UINavigationController {
-                print("segue: destinationViewController")
-                if let editViewController = destinationViewController.topViewController as? MemeViewController {
-                    print("segue: topViewController")
-                    editViewController.imageView.image = meme.image
-                    editViewController.topTextField.text = "test"
-                }
-            }
-        }
-    }
-    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         self.imageView.image = meme.memedImage
