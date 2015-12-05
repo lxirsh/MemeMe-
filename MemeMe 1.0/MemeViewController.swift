@@ -53,7 +53,9 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         
         // Setup a meme in the view if one has been sent from the detail view controller.
         if !(sentMeme == nil) {
-            setupMemeFromDetailViewConroller(sentMeme!)
+            imageView?.image = sentMeme!.image
+            topTextField?.text = sentMeme!.topText
+            bottomTextField?.text = sentMeme!.bottomText
         }
         
         
@@ -112,6 +114,7 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         }
         
         presentViewController(activityVC, animated: true, completion: nil)
+        navigationController?.popToRootViewControllerAnimated(true)
     }
     
     @IBAction func cancel(sender: UIBarButtonItem) {
@@ -120,13 +123,6 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     
     // MARK: Methods
-    
-    // If a meme is sent from the detail VC, setup the view.
-    func setupMemeFromDetailViewConroller(sentMeme: Meme) {
-        imageView?.image = sentMeme.image
-        topTextField?.text = sentMeme.topText
-        bottomTextField?.text = sentMeme.bottomText
-    }
     
     // Set attributes for the text fields
     func stylizeTextFields(textField: UITextField) {
@@ -162,7 +158,6 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         let memedImage = generateMemedImage()
         let meme = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, image: imageView.image!, memedImage: memedImage)
         (UIApplication.sharedApplication().delegate as! AppDelegate).savedMemes.append(meme)
-        print("Memes:  \((UIApplication.sharedApplication().delegate as! AppDelegate).savedMemes)")
     }
 
     // Shift the view up when keyboardWillShow notification is received
