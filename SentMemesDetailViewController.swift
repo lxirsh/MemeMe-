@@ -28,8 +28,8 @@ class SentMemesDetailViewController: UIViewController {
     
     func edit() {
         let rootViewController = self.storyboard!.instantiateViewControllerWithIdentifier("MemeNavigationController") as! UINavigationController
-////        let topViewController = rootViewController.topViewController as! MemeViewController
-////        topViewController.imageView.image = meme.image
+        let topViewController = rootViewController.topViewController as! MemeViewController
+        topViewController.sentMeme = meme
         self.navigationController!.presentViewController(rootViewController, animated: true, completion: nil)
 
     }

@@ -18,6 +18,7 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     @IBOutlet weak var cameraButton: UIBarButtonItem!
     @IBOutlet weak var actionButton: UIBarButtonItem!
     
+    var sentMeme: Meme?
     
     let imagePicker = UIImagePickerController()
     
@@ -28,7 +29,6 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         NSStrokeWidthAttributeName: NSNumber (float: -3.0)
     ]
     
-//    var savedMemes = [Meme]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +50,11 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         // Text field attributes
         stylizeTextFields(topTextField)
         stylizeTextFields(bottomTextField)
+        
+        // Setup a meme in the view if one has been sent from the detail view controller.
+        if !(sentMeme == nil) {
+            setupMemeFromDetailViewConroller(sentMeme!)
+        }
         
         
     }
@@ -115,6 +120,13 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     
     // MARK: Methods
+    
+    // If a meme is sent from the detail VC, setup the view.
+    func setupMemeFromDetailViewConroller(sentMeme: Meme) {
+        imageView?.image = sentMeme.image
+        topTextField?.text = sentMeme.topText
+        bottomTextField?.text = sentMeme.bottomText
+    }
     
     // Set attributes for the text fields
     func stylizeTextFields(textField: UITextField) {
