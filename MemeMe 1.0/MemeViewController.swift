@@ -8,16 +8,18 @@
 
 import UIKit
 
-class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
+class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate, UIScrollViewDelegate {
     
     // MARK: Properties
-    @IBOutlet weak var imageView: UIImageView!
+//    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var topTextField: UITextField!
     @IBOutlet weak var bottomTextField: UITextField!
     //@IBOutlet weak var bottomToolbar: UIToolbar!
     @IBOutlet weak var cameraButton: UIBarButtonItem!
     @IBOutlet weak var actionButton: UIBarButtonItem!
     
+    var imageView = UIImageView()
     var sentMeme: Meme?
     
     let imagePicker = UIImagePickerController()
@@ -38,6 +40,12 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         topTextField.delegate = self
         bottomTextField.delegate = self
         
+        scrollView.delegate = self
+        
+        // Setup the scrollView and the imageView
+        imageView.frame = CGRectMake(0, 0, scrollView.frame.size.width, scrollView.frame.size.height)
+        scrollView.addSubview(imageView)
+        
         
         // Disable the camera button if camera is not available
         cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
@@ -51,9 +59,11 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         stylizeTextFields(topTextField)
         stylizeTextFields(bottomTextField)
         
+        
+        
         // Setup a meme in the view if one has been sent from the detail view controller.
         if !(sentMeme == nil) {
-            imageView?.image = sentMeme!.image
+            imageView.image = sentMeme!.image
             topTextField?.text = sentMeme!.topText
             bottomTextField?.text = sentMeme!.bottomText
         }
@@ -204,12 +214,59 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
 
     //MARK: UIImagePickerControllerDelegate
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-        if let chosenImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            imageView.contentMode = .ScaleAspectFit
-            imageView.image = chosenImage
+        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            
+//            imageView.contentMode = .ScaleAspectFit
+            imageView.image = image
+            imageView.contentMode = UIViewContentMode.Center
+            imageView.frame = CGRectMake(0, 0, scrollView.frame.size.width, scrollView.frame.size.height)
+            
+            scrollView.contentSize = image.size
+            
+            let scrollViewFrame = scrollView.frame
+            let scaleWidth = scrollViewFrame.size.width / scrollView.contentSize.width
+            let scaleHeight = scrollViewFrame.size.height / scrollView.contentSize.height
+            let minScale = min(scaleHeight, scaleWidth)
+            
+            scrollView.minimumZoomScale = minScale
+            scrollView.maximumZoomScale = 1
+            scrollView.zoomScale = minScale
+            
+            centerScrollViewContents()
+            
             dismissViewControllerAnimated(true, completion: nil)
+        
         }
     }
+    
+    func centerScrollViewContents() {
+        let boundSize = scrollView.bounds.size
+        var contentsFrame = imageView.frame
+        
+        if contentsFrame.size.width < boundSize.width {
+            contentsFrame.origin.x = (boundSize.width - contentsFrame.size.width) / 2
+        } else {
+            contentsFrame.origin.x = 0
+        }
+        
+        if contentsFrame.size.height < boundSize.height {
+            contentsFrame.origin.y = (boundSize.height - contentsFrame.size.height) / 2
+        } else {
+            contentsFrame.origin.y = 0
+        }
+        
+        imageView.frame = contentsFrame
+    }
+    
+    func scrollViewDidZoom(scrollView: UIScrollView) {
+        centerScrollViewContents()
+    }
+    
+    
+    func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
+        return imageView
+    }
+    
     
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
         dismissViewControllerAnimated(true, completion: nil)
