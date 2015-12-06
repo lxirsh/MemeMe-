@@ -151,24 +151,33 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
 //        bottomToolbar.hidden = true
         
         // Render view to an image
-        let image = imageView.image
-        let size = CGSizeApplyAffineTransform((image?.size)!, CGAffineTransformMakeScale(0.5, 0.5))
-        let hasAlpha = false
-        let scale: CGFloat = 0.0
+//        let image = imageView.image
+//        let size = CGSizeApplyAffineTransform((image?.size)!, CGAffineTransformMakeScale(0.5, 0.5))
+//        let hasAlpha = false
+//        let scale: CGFloat = 0.0
         
 //        UIGraphicsBeginImageContext(view.bounds.size)
 //        view.drawViewHierarchyInRect(view.bounds, afterScreenUpdates: true)
-        UIGraphicsBeginImageContextWithOptions(size, !hasAlpha, scale)
-        image?.drawInRect(CGRect(origin: CGPointZero, size: size))
-        let memedImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsBeginImageContextWithOptions(scrollView.bounds.size, true, UIScreen.mainScreen().scale)
+        let offset = scrollView.contentOffset
+        
+        CGContextTranslateCTM(UIGraphicsGetCurrentContext(), -offset.x, -offset.y)
+        scrollView.layer.renderInContext(UIGraphicsGetCurrentContext()!)
+        
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        
         UIGraphicsEndImageContext()
+        
+//        image?.drawInRect(CGRect(origin: CGPointZero, size: size))
+//        let memedImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()
+//        UIGraphicsEndImageContext()
         
         // Show toolbar and navbar
         navigationController?.setNavigationBarHidden(false, animated: true)
         navigationController?.setToolbarHidden(false, animated: true)
 //        bottomToolbar.hidden = false
         
-        return memedImage
+        return image
     }
     
     func saveMeme() {
