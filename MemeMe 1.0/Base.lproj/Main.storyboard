@@ -17,6 +17,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vO0-lC-XnJ">
+                                <rect key="frame" x="0.0" y="64" width="600" height="492"/>
+                                <animations/>
+                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" borderStyle="roundedRect" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pTk-z6-YQP">
                                 <rect key="frame" x="20" y="470" width="560" height="30"/>
                                 <animations/>
@@ -29,24 +33,20 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wFI-Cv-oyQ">
-                                <rect key="frame" x="4" y="72" width="592" height="476"/>
-                                <animations/>
-                            </scrollView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="pTk-z6-YQP" firstAttribute="leading" secondItem="IgH-Ka-70B" secondAttribute="leadingMargin" id="31E-NW-40o"/>
                             <constraint firstItem="H83-Ao-p8y" firstAttribute="top" secondItem="pTk-z6-YQP" secondAttribute="bottom" constant="56" id="D9l-eH-qNx"/>
-                            <constraint firstItem="wFI-Cv-oyQ" firstAttribute="top" secondItem="ren-sr-sXT" secondAttribute="bottom" constant="-78" id="EjS-sf-aEB"/>
-                            <constraint firstItem="pTk-z6-YQP" firstAttribute="top" secondItem="wFI-Cv-oyQ" secondAttribute="bottom" constant="-78" id="MEF-Bk-1R9"/>
+                            <constraint firstItem="vO0-lC-XnJ" firstAttribute="leading" secondItem="IgH-Ka-70B" secondAttribute="leadingMargin" constant="-20" id="DGZ-xv-wuk"/>
+                            <constraint firstItem="vO0-lC-XnJ" firstAttribute="top" secondItem="sFj-24-YZ1" secondAttribute="bottom" id="Hq6-8H-I3r"/>
                             <constraint firstItem="pTk-z6-YQP" firstAttribute="trailing" secondItem="IgH-Ka-70B" secondAttribute="trailingMargin" id="OmQ-2H-uYT"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="wFI-Cv-oyQ" secondAttribute="trailing" constant="-16" id="YBo-rB-y8F"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vO0-lC-XnJ" secondAttribute="trailing" constant="-20" id="RGD-bg-W0o"/>
                             <constraint firstItem="ren-sr-sXT" firstAttribute="top" secondItem="sFj-24-YZ1" secondAttribute="bottom" constant="56" id="bXK-aB-x6z"/>
                             <constraint firstItem="ren-sr-sXT" firstAttribute="trailing" secondItem="IgH-Ka-70B" secondAttribute="trailingMargin" id="g16-Za-jLI"/>
+                            <constraint firstItem="H83-Ao-p8y" firstAttribute="top" secondItem="vO0-lC-XnJ" secondAttribute="bottom" id="oQA-8m-dU2"/>
                             <constraint firstItem="ren-sr-sXT" firstAttribute="leading" secondItem="IgH-Ka-70B" secondAttribute="leadingMargin" id="pLI-6o-RJg"/>
-                            <constraint firstItem="wFI-Cv-oyQ" firstAttribute="leading" secondItem="IgH-Ka-70B" secondAttribute="leadingMargin" constant="-16" id="zOA-9K-bnG"/>
                         </constraints>
                     </view>
                     <toolbarItems>
@@ -82,7 +82,7 @@
                         <outlet property="actionButton" destination="qrl-Rf-eJc" id="5Tl-YL-Pzj"/>
                         <outlet property="bottomTextField" destination="pTk-z6-YQP" id="YOP-yE-jVt"/>
                         <outlet property="cameraButton" destination="jPU-yb-SAg" id="uj4-yW-r7e"/>
-                        <outlet property="scrollView" destination="wFI-Cv-oyQ" id="ZCZ-9e-Nvd"/>
+                        <outlet property="imageView" destination="vO0-lC-XnJ" id="f4O-rv-b7b"/>
                         <outlet property="topTextField" destination="ren-sr-sXT" id="szK-00-Fei"/>
                     </connections>
                 </viewController>
@@ -122,7 +122,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yPo-iZ-g67" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1590" y="1018"/>
+            <point key="canvasLocation" x="1432" y="954"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="zwK-LR-zir">
@@ -201,6 +201,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Z3h-ve-t9a">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NGt-nA-T0G" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController storyboardIdentifier="MemeNavigationController" automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="OgW-MO-x0I" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" opaque="NO" contentMode="scaleToFill" id="Xmd-Pj-Tmn">
@@ -218,9 +219,8 @@
                         <segue destination="cIk-lp-Brj" kind="relationship" relationship="rootViewController" id="wDv-xq-foa"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NGt-nA-T0G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1590" y="272"/>
+            <point key="canvasLocation" x="2068" y="226"/>
         </scene>
         <!--table-->
         <scene sceneID="WLW-0I-r7y">
