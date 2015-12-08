@@ -151,15 +151,8 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
 //        bottomToolbar.hidden = true
         
         // Render view to an image
-        let image = imageView.image
-        let size = CGSizeApplyAffineTransform((image?.size)!, CGAffineTransformMakeScale(0.5, 0.5))
-        let hasAlpha = false
-        let scale: CGFloat = 0.0
-        
-//        UIGraphicsBeginImageContext(view.bounds.size)
-//        view.drawViewHierarchyInRect(view.bounds, afterScreenUpdates: true)
-        UIGraphicsBeginImageContextWithOptions(size, !hasAlpha, scale)
-        image?.drawInRect(CGRect(origin: CGPointZero, size: size))
+        UIGraphicsBeginImageContext(view.bounds.size)
+        view.drawViewHierarchyInRect(view.bounds, afterScreenUpdates: true)
         let memedImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
