@@ -19,7 +19,7 @@ class SentMemesTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        loadSampleMemes()
+//        loadSampleMemes()
         
 //        let applicationDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
 //        var savedMemes = applicationDelegate.savedMemes
@@ -31,19 +31,19 @@ class SentMemesTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
-    func loadSampleMemes() {
-
-        let numberOfSampleMemes = 10
-        
-        for index in 0...numberOfSampleMemes {
-            let newIndex = (index % 3) + 1
-            let imageName = "meal\(newIndex)"
-            let image = UIImage(named: imageName)!
-            let meme = Meme(topText: "TOP", bottomText: "BOTTOM", image: image, memedImage: image)
-            (UIApplication.sharedApplication().delegate as! AppDelegate).savedMemes.append(meme)
-            
-        }
-    }
+//    func loadSampleMemes() {
+//
+//        let numberOfSampleMemes = 10
+//        
+//        for index in 0...numberOfSampleMemes {
+//            let newIndex = (index % 3) + 1
+//            let imageName = "meal\(newIndex)"
+//            let image = UIImage(named: imageName)!
+//            let meme = Meme(topText: "TOP", bottomText: "BOTTOM", image: image, memedImage: image)
+//            (UIApplication.sharedApplication().delegate as! AppDelegate).savedMemes.append(meme)
+//            
+//        }
+//    }
 
     
     override func viewWillAppear(animated: Bool) {

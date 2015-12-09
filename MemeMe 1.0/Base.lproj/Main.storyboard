@@ -232,7 +232,7 @@
         <scene sceneID="WLW-0I-r7y">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Hn9-YE-LnT" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="table" selectedImage="table" id="EC3-dQ-goD"/>
+                    <tabBarItem key="tabBarItem" title="table" image="table" selectedImage="table" id="EC3-dQ-goD"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="pMM-XN-zck">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -314,7 +314,7 @@
         <scene sceneID="Qwt-qb-SEA">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="q5A-wW-gQW" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="collection" id="JEJ-Ll-xhN"/>
+                    <tabBarItem key="tabBarItem" title="collection" image="collection" id="JEJ-Ll-xhN"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="lN3-jk-b44">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -332,7 +332,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="table" width="37" height="32"/>
+        <image name="collection" width="30" height="30"/>
+        <image name="table" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="hr4-go-r1h"/>
