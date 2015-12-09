@@ -52,11 +52,6 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         stylizeTextFields(bottomTextField)
         
         // Setup a meme in the view if one has been sent from the detail view controller.
-//        if !(sentMeme == nil) {
-//            imageView?.image = sentMeme!.image
-//            topTextField?.text = sentMeme!.topText
-//            bottomTextField?.text = sentMeme!.bottomText
-//        }
         
         if let receivedMeme = sentMeme {
             imageView.image = receivedMeme.image
@@ -67,10 +62,6 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         
     }
     
-//    override func didReceiveMemoryWarning() {
-//        super.didReceiveMemoryWarning()
-//        // Dispose of any resources that can be recreated.
-//    }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
